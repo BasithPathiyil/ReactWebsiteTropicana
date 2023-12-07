@@ -1,17 +1,25 @@
 import { Box, Card, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import imageUrl from "../../assets/images/IMG_2961-04022021 1.png";
 
-const CompanyDescription = () => {
+const CompanyDescription = ({ isMobile }) => {
   return (
     <Grid
       item
       xs={12}
       md={12}
-      sx={{ bgcolor: "rgba(248, 248, 248, 0.70)", padding: "50px 80px" }}
+      sx={{
+        bgcolor: "rgba(248, 248, 248, 0.70)",
+        padding: isMobile ? "40px 10px" : "50px 80px",
+      }}
     >
       <Grid container>
-        <Grid item xs={12} md={4.5} sx={{ paddingRight: "75px" }}>
+        <Grid
+          item
+          xs={12}
+          md={4.5}
+          sx={{ paddingRight: isMobile ? "2px" : "75px" }}
+        >
           <Box>
             <Typography
               style={{

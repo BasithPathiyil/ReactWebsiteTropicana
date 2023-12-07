@@ -27,7 +27,7 @@ let products = [
   },
 ];
 
-const RecentProducts = () => {
+const RecentProducts = ({ isMobile }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
   return (
     <Grid container>
@@ -46,10 +46,15 @@ const RecentProducts = () => {
           Our Recent Products
         </Typography>
       </Grid>
-      <Grid item xs={12} md={12} sx={{ padding: "0px 80px" }}>
+      <Grid
+        item
+        xs={12}
+        md={12}
+        sx={{ padding: isMobile ? "0px 10px" : "0px 80px" }}
+      >
         <Grid container spacing={5}>
           {products?.map((product) => (
-            <Grid item xs={6} md={3} key={product.id}>
+            <Grid item xs={12} md={3} key={product.id}>
               <Card
                 sx={{
                   p: "20px",

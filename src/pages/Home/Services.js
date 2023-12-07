@@ -7,7 +7,7 @@ import img4 from "../../assets/images/Rectangle 23.png";
 import { Card, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Services = () => {
+const Services = ({ isMobile }) => {
   let products = [
     {
       id: "1",
@@ -54,7 +54,11 @@ const Services = () => {
       </Grid>
       <Grid item xs={12} md={12}>
         <div
-          style={{ display: "flex", marginLeft: "80px", overflowX: "scroll" }}
+          style={{
+            display: "flex",
+            marginLeft: isMobile ? "10px" : "80px",
+            overflowX: "scroll",
+          }}
         >
           {products.map((product) => (
             <Grid

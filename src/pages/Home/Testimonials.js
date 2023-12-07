@@ -19,7 +19,7 @@ const Testimonials = () => {
         <Grid item xs={12} md={12}>
           <Grid
             container
-            padding={"10px 350px"}
+            // padding={"10px 350px"}
             style={{ textAlign: "center" }}
           >
             <Grid item xs={12} md={12}>
@@ -77,8 +77,18 @@ const Testimonials = () => {
                 Enquire Now
               </Button>
             </Grid>
-            <Grid item xs={12} md={5}>
-              <img src={img2} alt="as" />
+            <Grid
+              item
+              xs={12}
+              md={5}
+              style={{
+                // backgroundImage: `url(${img2})`,
+                height: "327px",
+                // backgroundSize: "cover",
+                // backgroundPosition: "center",
+              }}
+            >
+              <img src={img2} alt="as" style={{ width: "100%" }} />
             </Grid>
           </Grid>
         </Grid>
