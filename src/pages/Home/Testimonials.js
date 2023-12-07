@@ -5,7 +5,7 @@ import FiveStarIcon from "../../assets/svgicons/FiveStarIcon";
 import img1 from "../../assets/images/Young and beautiful woman in pink warm sweater, natural look, smiling, portrait on , isolated, long hair.png";
 import img2 from "../../assets/images/167 1.png";
 import img3 from "../../assets/images/b49b7ccf-a4e6-4bdc-999e-63b093a3ffa5 1.png";
-const Testimonials = () => {
+const Testimonials = ({ isMobile }) => {
   return (
     <Grid item xs={12} md={12} marginTop={"20px"}>
       <Grid container>
@@ -13,7 +13,12 @@ const Testimonials = () => {
           <img
             src={img3}
             alt="sdss"
-            style={{ position: "absolute", bottom: -70 }}
+            style={{
+              position: "absolute",
+              bottom: -70,
+              height: isMobile ? "300px" : "auto",
+              width: isMobile ? "300px" : "auto",
+            }}
           />
         </div>
         <Grid item xs={12} md={12}>

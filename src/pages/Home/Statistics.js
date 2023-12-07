@@ -2,7 +2,7 @@ import { Grid, Typography } from "@mui/material";
 import React from "react";
 import img2 from "../../assets/images/Portrait of blonde woman holding a plant.png";
 
-const Statistics = () => {
+const Statistics = ({ isMobile }) => {
   return (
     <Grid item xs={12} md={12} marginTop={"30px"}>
       <Grid container>
@@ -61,13 +61,21 @@ const Statistics = () => {
                   background: "#5B9B3E",
                   position: "absolute",
                   top: "100px",
-                  height: "470px",
-                  width: "470px",
+                  height: isMobile ? "300px" : "470px",
+                  width: isMobile ? "300px" : "470px",
                   borderRadius: "50%",
                   opacity: ".8",
                 }}
               />
-              <img style={{ zIndex: 1 }} src={img2} alt="images" />
+              <img
+                style={{
+                  zIndex: 1,
+                  height: isMobile ? "300px" : "470px",
+                  width: isMobile ? "300px" : "470px",
+                }}
+                src={img2}
+                alt="images"
+              />
             </Grid>
             <Grid
               item

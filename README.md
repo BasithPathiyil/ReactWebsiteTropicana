@@ -2,7 +2,15 @@
 
 ## Available Scripts
 
+### `Clone the project`
+
+Clone this project using https://github.com/BasithPathiyil/ReactWebsiteTropicana.git
+
 In the project directory, you can run:
+
+### `npm install`
+
+This will install all the dependecies
 
 ### `npm start`
 
